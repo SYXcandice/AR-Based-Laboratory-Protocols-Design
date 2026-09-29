@@ -60,6 +60,8 @@
 .resource-card p{max-width:410px}
 .resource-card h3{margin-top:20px}
 .resource-state{padding-top:23px}
+.citation-formatted{padding:22px 26px 0;font-size:13px;line-height:1.85;color:var(--ink);max-width:960px}
+.citation-formatted em{font-family:var(--serif);font-size:15px}
 @media(max-width:1050px){
  .section{padding-block:76px}
  .overview{gap:36px}
@@ -99,6 +101,7 @@
  .video-slot{aspect-ratio:4/3}
  .resource-grid{gap:12px}
  .resource-card{padding:23px}
+ .citation-formatted{padding:18px 18px 0;font-size:12px}
 }
 @media(max-width:380px){
  .finding-panels{padding:20px}

@@ -17,7 +17,13 @@ window.PROJECT_CONFIG = {
     venue: "CCF Transactions on Pervasive Computing and Interaction",
     shortName: "TPCI",
     year: "",
-    // 正式发表后，将出版方提供的完整 BibTeX 粘贴在反引号之间。
-    bibtex: ""
+    // 正式发表后，用出版方提供的完整 BibTeX 替换以下 in-press 引用。
+    bibtex: `@article{shen_ar_laboratory_protocols,
+  title   = {Exploring the Design of {AR}-Based Procedural Guidance
+             Tools to Support Reproducible Laboratory Workflows},
+  author  = {Shen, Yuxin and Liang, Wei and Ma, Jianzhu and Zhu, Yixin},
+  journal = {CCF Transactions on Pervasive Computing and Interaction},
+  note    = {In press}
+}`
   }
 };

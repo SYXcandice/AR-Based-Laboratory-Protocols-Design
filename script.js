@@ -144,10 +144,9 @@
     document.getElementById("publication-status").textContent = details || "Published paper available";
     document.querySelector("#resources .section-intro").textContent = "Read the published paper and explore the project demonstration.";
   }
-  if (publicationURL && publication.bibtex?.trim()) {
-    document.querySelector(".citation").hidden = false;
+  if (publication.bibtex?.trim()) {
     document.getElementById("bibtex").textContent = publication.bibtex.trim();
-    document.getElementById("citation-note").textContent = "Publication citation";
+    if (publicationURL) document.getElementById("citation-note").textContent = "Publication citation";
   }
 
   const copyButton = document.getElementById("copy-citation");
