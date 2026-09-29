@@ -116,3 +116,22 @@
  .finding-panels [role="tabpanel"]{display:grid!important;min-height:0;margin-bottom:35px}
  .finding-visual.finding-media{height:200px}
 }
+
+/* Citation card */
+.citation-body{padding:25px 26px 22px}
+.citation-label{display:block;margin-bottom:10px;color:var(--green);font-size:8px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.citation .citation-formatted{max-width:1050px;padding:0;font-size:14px;line-height:1.85;color:var(--ink)}
+.citation .citation-formatted em{font-family:var(--serif);font-size:16px}
+.citation-bibtex{margin-top:22px;border-top:1px solid var(--line)}
+.citation-bibtex summary{display:flex;align-items:center;justify-content:space-between;padding-top:15px;list-style:none;cursor:pointer;font-size:10px;font-weight:500}
+.citation-bibtex summary::-webkit-details-marker{display:none}
+.citation-bibtex summary span{font-size:17px;transition:transform .2s}
+.citation-bibtex[open] summary span{transform:rotate(45deg)}
+.citation .citation-bibtex pre{margin-top:13px;padding:17px 18px;border:1px solid var(--line);border-radius:4px;background:#f8faf5;font-size:10px}
+.citation #copy-status:not(:empty){padding:12px 0 0}
+@media(max-width:760px){
+ .citation-body{padding:20px 18px}
+ .citation .citation-formatted{font-size:12px;line-height:1.8}
+ .citation .citation-formatted em{font-size:14px}
+ .citation .citation-bibtex pre{padding:14px 12px;font-size:9px}
+}

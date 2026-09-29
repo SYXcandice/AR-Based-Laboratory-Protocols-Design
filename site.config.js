@@ -16,13 +16,14 @@ window.PROJECT_CONFIG = {
     status: "accepted",
     venue: "CCF Transactions on Pervasive Computing and Interaction",
     shortName: "TPCI",
-    year: "",
+    year: "2026",
     // 正式发表后，用出版方提供的完整 BibTeX 替换以下 in-press 引用。
-    bibtex: `@article{shen_ar_laboratory_protocols,
+    bibtex: `@article{shen2026ar,
   title   = {Exploring the Design of {AR}-Based Procedural Guidance
              Tools to Support Reproducible Laboratory Workflows},
   author  = {Shen, Yuxin and Liang, Wei and Ma, Jianzhu and Zhu, Yixin},
   journal = {CCF Transactions on Pervasive Computing and Interaction},
+  year    = {2026},
   note    = {In press}
 }`
   }
