@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+.cache/
+test-results/
+playwright-report/
+__pycache__/
+
+# Do not include the unpublished paper in website assets.
+assets/papers/manuscript.pdf
+
+# Keep the original video locally; publish the optimized web copy.
+assets/videos/video.mp4
+
+# Superseded paper figure retained locally; the site uses the original concept illustration.
+assets/images/design-opportunities.webp
