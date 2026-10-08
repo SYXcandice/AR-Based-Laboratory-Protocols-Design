@@ -140,16 +140,16 @@
     link.href = publicationURL;
     link.target = "_blank";
     link.rel = "noopener";
-    const publishedDate = publication.publishedDate ? `Published online on ${publication.publishedDate} in ${publication.venue}.` : `${publication.venue} · ${publication.year}`;
+    const publishedDate = publication.publishedDate ? `Available online from ${publication.publishedDate} in ${publication.venue}.` : `${publication.venue} · ${publication.year}`;
     document.getElementById("published-description").textContent = publishedDate;
-    document.getElementById("published-state").textContent = "Read on Springer ↗";
-    document.getElementById("publication-status").textContent = `Published · ${publication.shortName || publication.venue} · ${publication.year}`;
+    document.getElementById("published-state").textContent = "Open on Springer ↗";
+    document.getElementById("publication-status").textContent = `${publication.shortName || publication.venue} · ${publication.year}`;
     document.querySelector(".venue-link").href = publicationURL;
-    document.querySelector("#resources .section-intro").textContent = `Published online in ${publication.shortName || publication.venue} on ${publication.publishedDate}. Read the version of record, download the paper, and watch the project demonstration.`;
+    document.querySelector("#resources .section-intro").textContent = `Available online in ${publication.shortName || publication.venue} from ${publication.publishedDate}. Visit the Springer page, view the PDF, or watch the project demonstration.`;
   }
   if (publication.bibtex?.trim()) {
     document.getElementById("bibtex").textContent = publication.bibtex.trim();
-    if (publicationURL) document.getElementById("citation-note").textContent = `Published online · ${publication.publishedDate} · DOI ${publication.doi}`;
+    if (publicationURL) document.getElementById("citation-note").textContent = `Online · ${publication.publishedDate} · DOI ${publication.doi}`;
   }
 
   const copyButton = document.getElementById("copy-citation");
