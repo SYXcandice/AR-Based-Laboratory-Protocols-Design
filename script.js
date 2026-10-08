@@ -130,23 +130,26 @@
   }
   if (publicationURL) {
     const card = document.getElementById("published-resource");
-    const link = document.createElement("a");
-    link.className = "resource-card";
-    link.id = card.id;
+    const link = card.tagName === "A" ? card : document.createElement("a");
+    if (link !== card) {
+      link.className = "resource-card";
+      link.id = card.id;
+      link.append(...card.childNodes);
+      card.replaceWith(link);
+    }
     link.href = publicationURL;
     link.target = "_blank";
     link.rel = "noopener";
-    link.append(...card.childNodes);
-    card.replaceWith(link);
-    const details = [publication.venue, publication.year].filter(Boolean).join(" · ");
-    document.getElementById("published-description").textContent = details || "Read the final published version of the paper.";
-    document.getElementById("published-state").textContent = "Read published paper ↗";
-    document.getElementById("publication-status").textContent = details || "Published paper available";
-    document.querySelector("#resources .section-intro").textContent = "Read the published paper and explore the project demonstration.";
+    const publishedDate = publication.publishedDate ? `Published online on ${publication.publishedDate} in ${publication.venue}.` : `${publication.venue} · ${publication.year}`;
+    document.getElementById("published-description").textContent = publishedDate;
+    document.getElementById("published-state").textContent = "Read on Springer ↗";
+    document.getElementById("publication-status").textContent = `Published · ${publication.shortName || publication.venue} · ${publication.year}`;
+    document.querySelector(".venue-link").href = publicationURL;
+    document.querySelector("#resources .section-intro").textContent = `Published online in ${publication.shortName || publication.venue} on ${publication.publishedDate}. Read the version of record, download the paper, and watch the project demonstration.`;
   }
   if (publication.bibtex?.trim()) {
     document.getElementById("bibtex").textContent = publication.bibtex.trim();
-    if (publicationURL) document.getElementById("citation-note").textContent = "Publication citation";
+    if (publicationURL) document.getElementById("citation-note").textContent = `Published online · ${publication.publishedDate} · DOI ${publication.doi}`;
   }
 
   const copyButton = document.getElementById("copy-citation");
